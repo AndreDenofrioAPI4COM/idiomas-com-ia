@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITULO}} — Bloco {{NN}} · {{LINGUA}}</title>
+  <link rel="stylesheet" href="../assets/estudo.css">
+  <meta name="idiomas:tipo" content="bloco">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="{{BLOCO_SLUG}}">
+</head>
+<body>
+<nav class="breadcrumb"><a href="../index.html">Início</a> › <a href="index.html">Currículo</a> › B{{NN}}</nav>
+
+<header class="pagina">
+  <p class="kicker">Currículo · Bloco {{NN}} · <code>bloco::{{BLOCO_SLUG}}</code></p>
+  <h1>{{TITULO}}</h1>
+  <p class="resumo">Quando este bloco fechar, você consegue: <em>{{UMA_FRASE_VERIFICAVEL_NA_PRIMEIRA_PESSOA}}</em>.</p>
+</header>
+
+<main>
+
+<section>
+  <h2>Situação-alvo</h2>
+  <p>{{O_MOMENTO_CONCRETO_DO_OBJETIVO_EM_QUE_ESTE_BLOCO_E_USADO}}</p>
+</section>
+
+<section>
+  <h2>Critério de pronto</h2>
+  <p>O bloco fecha por critério, não por data. Cada lote passa por dois portões:</p>
+  <ol>
+    <li><strong>Durabilidade (Anki):</strong> intervalo ≥ 7 dias em ≥ 90% dos cartões de Produção do lote.
+      <br>Busca: <code>tag:lote::{{BLOCO_SLUG}}::01 card:Produção prop:ivl&gt;=7</code> contra
+      <code>tag:lote::{{BLOCO_SLUG}}::01 card:Produção</code>.</li>
+    <li><strong>Entrega (você):</strong> dizer o lote inteiro em voz alta, sem ler, no ritmo do áudio.
+      Ou sai ou não sai.</li>
+  </ol>
+  <p>Os itens que ficarem de fora (leech) não seguram o lote: viram recorte.</p>
+</section>
+
+<section>
+  <h2>Lotes</h2>
+  <p>Um lote = um arquivo CSV = no máximo {{TAMANHO_LOTE}} linhas. Puxar = importar o próximo arquivo.
+  Itens confundíveis ficam em lotes diferentes.</p>
+  <div class="rolavel">
+    <table class="tabela">
+      <thead><tr><th>Lote</th><th>Arquivo</th><th>Linhas</th><th>O que entra</th><th>Separado de propósito</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td><a href="../cartoes/{{BLOCO_SLUG}}-l01.csv"><code>{{BLOCO_SLUG}}-l01.csv</code></a></td>
+          <td>{{N}}</td>
+          <td>{{RESUMO_DO_LOTE}}</td>
+          <td>{{PAR_CONFUNDIVEL}} → lote {{NN_OUTRO}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>As frases do bloco</h2>
+  <p>Agrupadas por tema para consulta. A ordem de entrada no Anki é a dos lotes, não esta.</p>
+  <figure class="exemplo">
+    <p class="alvo" lang="{{LINGUA_LANG}}">{{FRASE_ALVO}}</p>
+    <p class="pron">{{PRONUNCIA_SE_HOUVER}}</p>
+    <p class="tr">{{TRADUCAO}}</p>
+    <figcaption class="nota">Cena do cartão: {{SITUACAO}}</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Glossário (não vira cartão)</h2>
+  <p>Palavra a palavra das fórmulas fixas — para você não dizer som sem sentido. Fórmula se aprende
+  inteira; este glossário é consulta, não revisão.</p>
+  <dl class="vocab">
+    <dt lang="{{LINGUA_LANG}}">{{PALAVRA}}</dt>
+    <dd><span class="tr">{{SENTIDO}}</span><span class="classe">{{CLASSE}}</span></dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Nota cultural</h2>
+  <div class="cultura">
+    <p>Só quando a situação exigir: como a coisa funciona lá e no que difere daqui.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p>Gerado em {{DATA}} por <code>/curriculo</code> ·
+     <a href="../progresso/tracker.html">progresso</a> · <a href="index.html">currículo</a></p>
+</footer>
+</body>
+</html>

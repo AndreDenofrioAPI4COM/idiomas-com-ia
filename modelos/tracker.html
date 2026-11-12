@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progresso · {{LINGUA}}</title>
+  <link rel="stylesheet" href="../assets/estudo.css">
+  <meta name="idiomas:tipo" content="tracker">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="—">
+</head>
+<body>
+<nav class="breadcrumb"><a href="../index.html">Início</a> › Progresso</nav>
+
+<header class="pagina">
+  <p class="kicker">Tracker</p>
+  <h1>Progresso</h1>
+  <p class="resumo">Atualizado por <code>/revisao</code>, <code>/curriculo</code> e <code>/avaliacao</code>.
+  Mede retenção e fala, não esforço — horas e contagem de cartões o Anki já mostra.</p>
+</header>
+
+<main>
+
+<section>
+  <h2>Quadro</h2>
+  <p>Épico = bloco · card = lote (um CSV) · puxar = importar. Done = intervalo ≥ 7 dias em ≥ 90% dos
+  cartões de Produção + passada de entrega sem ler. WIP recomendado: 2 em fazendo.</p>
+  <div class="quadro">
+    <div class="coluna">
+      <h3>Backlog</h3>
+      <ul><li><code>{{BLOCO}}-l01</code> · {{N}} linhas</li></ul>
+    </div>
+    <div class="coluna fazendo">
+      <h3>Fazendo</h3>
+      <ul><li><code>{{BLOCO}}-lNN</code> · importado em {{DATA}}</li></ul>
+    </div>
+    <div class="coluna done">
+      <h3>Done</h3>
+      <ul><li class="vazio">nenhum ainda</li></ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Trilha A — fila zerada</h2>
+  <p>Streak atual: <strong>{{N}} dias</strong> · maior streak: {{N}} · dias perdidos no último mês: {{N}}</p>
+  <p>Um tique por dia; a trilha A não gera arquivo de diário.</p>
+</section>
+
+<section>
+  <h2>Burn-down</h2>
+  <p>Só existe com prazo. Sem prazo, esta seção mostra a velocidade e nada mais.</p>
+  <div class="rolavel">
+    <table class="tabela">
+      <thead><tr><th>Data</th><th>Lotes done</th><th>Lotes restantes</th><th>Dias até o prazo</th><th>Velocidade (dias/lote)</th><th>Cabe?</th></tr></thead>
+      <tbody><tr><td>{{DATA}}</td><td>0</td><td>{{N}}</td><td>{{N}}</td><td>—</td><td>— (mede a partir do 2º lote fechado)</td></tr></tbody>
+    </table>
+  </div>
+  <p>Data de parar de puxar: {{PRAZO_MENOS_15_DIAS_OU_TRACO}} — lote puxado depois disso não fecha os dois portões a tempo.</p>
+</section>
+
+<section>
+  <h2>Gravações semanais</h2>
+  <div class="rolavel">
+    <table class="tabela">
+      <thead><tr><th>Semana</th><th>Arquivo</th><th>O que foi gravado</th></tr></thead>
+      <tbody><tr><td>{{AAAA-Www}}</td><td><code>audio/{{AAAA-MM-DD-NN}}.m4a</code></td><td>{{LOTE}}</td></tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Simulações</h2>
+  <ul><li class="vazio">nenhuma ainda — <code>/avaliacao</code> ao fechar um bloco</li></ul>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p><a href="../index.html">Início</a> · atualizado em {{DATA}}</p>
+</footer>
+</body>
+</html>

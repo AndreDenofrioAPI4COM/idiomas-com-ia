@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{DATA}} — Simulação: {{CENA}} · {{LINGUA}}</title>
+  <link rel="stylesheet" href="../../assets/estudo.css">
+  <meta name="idiomas:tipo" content="avaliacao">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="{{BLOCO_SLUG_OU_ENSAIO_GERAL}}">
+</head>
+<body>
+<nav class="breadcrumb"><a href="../../index.html">Início</a> › <a href="../tracker.html">Progresso</a> › Simulação {{DATA}}</nav>
+
+<header class="pagina">
+  <p class="kicker">Simulação, não prova · {{RECORTE}}</p>
+  <h1>{{CENA}}</h1>
+  <p class="resumo">Mede uma coisa: o que você precisa dizer sai na hora, sem consulta?</p>
+</header>
+
+<main>
+
+<section>
+  <h2>A cena</h2>
+  <p>{{QUEM_E_O_ASSISTENTE_ONDE_O_QUE_ESTA_EM_JOGO}}</p>
+</section>
+
+<section>
+  <h2>Transcrição</h2>
+  <figure class="exemplo">
+    <p class="alvo" lang="{{LINGUA_LANG}}"><strong>{{PAPEL}}:</strong> {{FALA_DO_ASSISTENTE}}</p>
+    <p class="alvo" lang="{{LINGUA_LANG}}"><strong>Você:</strong> {{SUA_RESPOSTA}}</p>
+    <figcaption class="nota">{{SAIU_NA_HORA_OU_TRAVOU}}</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Erros, linha a linha</h2>
+  <div class="rolavel">
+    <table class="tabela">
+      <thead><tr><th>Você disse</th><th>Um nativo diria</th><th>Por quê</th></tr></thead>
+      <tbody><tr><td lang="{{LINGUA_LANG}}">{{FRASE}}</td><td lang="{{LINGUA_LANG}}">{{VERSAO}}</td><td>{{MOTIVO}}</td></tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Veredito</h2>
+  <!-- deixe só um dos três -->
+  <div class="veredito pronto"><p>✅ <strong>Pronto para a cena</strong> — respondeu tudo sem consulta e sem hesitar.</p></div>
+  <div class="veredito trava"><p>⚠️ <strong>Sai, mas trava</strong> — o conteúdo existe e não automatizou. Não puxe lote novo: drille o que está em fazendo.</p></div>
+  <div class="veredito nao"><p>🔁 <strong>Não sai</strong> — falha de recuperação. Volte ao recorte: cena vaga, unidade grande demais ou confundíveis no mesmo lote.</p></div>
+  <div class="alerta"><p>Pronúncia não foi avaliada: o assistente não ouve. Ela se mede pelo cartão de Escuta,
+  pela gravação semanal, pelo ditado por voz e por um falante nativo.</p></div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p>Gerado em {{DATA}} por <code>/avaliacao</code> · <a href="../tracker.html">tracker</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PONTO}} — Gramática · {{LINGUA}}</title>
+  <link rel="stylesheet" href="../assets/estudo.css">
+  <meta name="idiomas:tipo" content="gramatica">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="{{BLOCO_SLUG_OU_TRACO}}">
+</head>
+<body>
+<nav class="breadcrumb"><a href="../index.html">Início</a> › <a href="index.html">Gramática</a> › {{PONTO}}</nav>
+
+<header class="pagina">
+  <p class="kicker">Gramática</p>
+  <h1>{{PONTO}}</h1>
+  <p class="resumo">{{UMA_FRASE_O_QUE_ISTO_RESOLVE}}</p>
+</header>
+
+<main>
+
+<section>
+  <h2>A forma</h2>
+  <p>Língua que flexiona: o paradigma com os verbos/adjetivos mais comuns. Língua que não flexiona:
+  a construção em slots.</p>
+  <p class="formula">{{FORMULA_EM_SLOTS}}</p>
+  <div class="rolavel">
+    <table class="tabela">
+      <thead><tr><th>Pessoa</th><th>{{VERBO_1}}</th><th>{{VERBO_2}}</th><th>{{VERBO_3}}</th></tr></thead>
+      <tbody><tr><td>{{PESSOA}}</td><td lang="{{LINGUA_LANG}}">…</td><td lang="{{LINGUA_LANG}}">…</td><td lang="{{LINGUA_LANG}}">…</td></tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Por que o falante escolhe isso</h2>
+  <p>A função comunicativa. Sem ela, a forma é decorada e nunca usada.</p>
+</section>
+
+<section>
+  <h2>Exemplos</h2>
+  <p>Só com vocabulário já ensinado. O que estrear leva <span class="challenge">challenge</span>.</p>
+  <figure class="exemplo">
+    <p class="alvo" lang="{{LINGUA_LANG}}">{{FRASE}}</p>
+    <p class="pron">{{PRONUNCIA_SE_HOUVER}}</p>
+    <p class="tr">{{TRADUCAO}}</p>
+  </figure>
+</section>
+
+<section>
+  <h2>Onde a sua língua atrapalha</h2>
+  <div class="contraste">
+    <p>A intuição do falante de {{LINGUA_DO_APRENDIZ}} que produz o erro, nomeada.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Erros típicos</h2>
+  <p><span class="errado" lang="{{LINGUA_LANG}}">{{FRASE_ERRADA}}</span> — {{POR_QUE}}</p>
+</section>
+
+<section>
+  <h2>Vizinhos que se confundem</h2>
+  <div class="rolavel">
+    <table class="tabela">
+      <thead><tr><th>Forma</th><th>Quando</th><th>Exemplo</th></tr></thead>
+      <tbody><tr><td>{{FORMA}}</td><td>{{QUANDO}}</td><td lang="{{LINGUA_LANG}}">{{EXEMPLO}}</td></tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="exercicios">
+  <h2>Produza</h2>
+  <ol><li>{{ENUNCIADO_EM_FORMA_DE_CENA}}</li></ol>
+  <details class="gabarito">
+    <summary>Gabarito</summary>
+    <ol><li><span lang="{{LINGUA_LANG}}">{{RESPOSTA}}</span></li></ol>
+  </details>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p>Gerado em {{DATA}} por <code>/gramatica</code> · cartões: <code>cartoes/{{DATA}}-{{SLUG}}.csv</code></p>
+</footer>
+</body>
+</html>

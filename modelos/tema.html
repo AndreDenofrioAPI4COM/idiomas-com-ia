@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{DOMINIO}} — Tema · {{LINGUA}}</title>
+  <link rel="stylesheet" href="../assets/estudo.css">
+  <meta name="idiomas:tipo" content="tema">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="{{BLOCO_SLUG_OU_TRACO}}">
+</head>
+<body>
+<nav class="breadcrumb"><a href="../index.html">Início</a> › <a href="index.html">Temas</a> › {{DOMINIO}}</nav>
+
+<header class="pagina">
+  <p class="kicker">Domínio fora do livro-texto · <code>tema::{{SLUG}}</code></p>
+  <h1>{{DOMINIO}}</h1>
+  <p class="resumo">{{ONDE_ISTO_APARECE_NO_SEU_OBJETIVO}}</p>
+</header>
+
+<main>
+
+<section>
+  <h2>Mapa do domínio</h2>
+  <p>Por subgrupo. O que está acima do nível leva <span class="challenge">challenge</span>.</p>
+  <h3>{{SUBGRUPO}}</h3>
+  <dl class="vocab">
+    <dt lang="{{LINGUA_LANG}}">{{ITEM_COM_MOLDURA}}</dt>
+    <dd><span class="tr">{{SENTIDO}}</span><span class="classe">{{CLASSE}}</span><span class="info">{{INFO}}</span></dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Frases que você vai dizer</h2>
+  <p>Da mais provável para a menos provável.</p>
+  <figure class="exemplo">
+    <p class="alvo" lang="{{LINGUA_LANG}}">{{FRASE}}</p>
+    <p class="pron">{{PRONUNCIA_SE_HOUVER}}</p>
+    <p class="tr">{{TRADUCAO}}</p>
+    <figcaption class="nota">Registro: {{REGISTRO}}</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Diálogo</h2>
+  <figure class="exemplo">
+    <p class="alvo" lang="{{LINGUA_LANG}}"><strong>A:</strong> {{TURNO}}</p>
+    <p class="tr">{{TRADUCAO}}</p>
+  </figure>
+</section>
+
+<section>
+  <h2>Como funciona lá</h2>
+  <div class="cultura"><p>{{NOTA_CULTURAL}}</p></div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p>Gerado em {{DATA}} por <code>/tema</code> · cartões: <code>cartoes/{{DATA}}-{{SLUG}}.csv</code></p>
+</footer>
+</body>
+</html>

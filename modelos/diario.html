@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{DATA}} — sessão {{N}} · Diário · {{LINGUA}}</title>
+  <link rel="stylesheet" href="../assets/estudo.css">
+  <meta name="idiomas:tipo" content="diario">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="{{BLOCO_SLUG}}">
+</head>
+<body>
+<nav class="breadcrumb"><a href="../index.html">Início</a> › <a href="index.html">Diário</a> › {{DATA}} · {{N}}</nav>
+
+<header class="pagina">
+  <p class="kicker">Sessão {{N}} do dia · trilha B · bloco <code>{{BLOCO_SLUG}}</code></p>
+  <h1>{{DATA}} — sessão {{N}}</h1>
+  <p class="resumo">Tempo real: {{MIN}} min · dificuldade percebida: {{1_A_5}}/5 ·
+  lote puxado: {{LOTE_OU_NENHUM}} · lotes em fazendo: {{WIP}}</p>
+</header>
+
+<main>
+
+<section>
+  <h2>O que foi feito</h2>
+  <ul>
+    <li>Fila do Anki zerada antes de tudo: {{SIM_NAO}}</li>
+    <li>Lote: {{O_QUE_ENTROU}}</li>
+    <li>Produção: {{O_QUE_FOI_DITO_OU_ESCRITO}}</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Correções</h2>
+  <p>Sua frase, a versão corrigida, e o porquê.</p>
+  <figure class="exemplo">
+    <p class="errado" lang="{{LINGUA_LANG}}">{{FRASE_DO_APRENDIZ}}</p>
+    <p class="alvo" lang="{{LINGUA_LANG}}">{{VERSAO_CORRIGIDA}}</p>
+    <p class="tr">{{POR_QUE}}</p>
+  </figure>
+</section>
+
+<section>
+  <h2>Leech</h2>
+  <p>Itens que você errou duas vezes, com o campo de mnemônico vazio. Quem escreve é você — ou o
+  cartão é recortado de novo. Decisão: {{MNEMONICO_OU_RECORTE}}</p>
+</section>
+
+<section>
+  <h2>Gravação da semana</h2>
+  <p>{{CAMINHO_audio/AAAA-MM-DD-NN.m4a_OU_FALHA_REGISTRADA}}</p>
+</section>
+
+<section>
+  <h2>O que travou</h2>
+  <p>O que custou esforço desproporcional. Erro que aparece 3 vezes no diário vai para
+  "Dificuldades recorrentes" no perfil.</p>
+</section>
+
+<section>
+  <h2>Próxima sessão</h2>
+  <ul><li>{{O_QUE_CONTINUAR}}</li></ul>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p>Registrado por <code>/revisao</code> · <a href="../progresso/tracker.html">tracker</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITULO}} — Leitura · {{LINGUA}}</title>
+  <link rel="stylesheet" href="../assets/estudo.css">
+  <meta name="idiomas:tipo" content="leitura">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="—">
+</head>
+<body>
+<nav class="breadcrumb"><a href="../index.html">Início</a> › <a href="index.html">Leituras</a> › {{TITULO}}</nav>
+
+<header class="pagina">
+  <p class="kicker">Leitura assistida</p>
+  <h1>{{TITULO}}</h1>
+  <p class="resumo">{{FONTE_AUTOR_DATA}} · por que este texto.</p>
+</header>
+
+<main>
+
+<section>
+  <h2>Texto original</h2>
+  <article lang="{{LINGUA_LANG}}">
+    <p>{{PARAGRAFO}}</p>
+  </article>
+</section>
+
+<details class="recolhido">
+  <summary>Tradução</summary>
+  <p>Natural, não literal — o que um tradutor humano escreveria.</p>
+</details>
+
+<section>
+  <h2>Vocabulário desafiador</h2>
+  <p>15–20 itens. Cartões: <code>cartoes/{{DATA}}-{{SLUG}}.csv</code></p>
+  <dl class="vocab">
+    <dt lang="{{LINGUA_LANG}}">{{ITEM}}</dt>
+    <dd><span class="tr">{{SENTIDO}}</span><span class="classe">{{CLASSE}}</span><span class="info">{{INFO}}</span></dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Expressões fixas</h2>
+  <p>Idiomatismos, gírias e construções fixas — o que trava a leitura de verdade.</p>
+</section>
+
+<section>
+  <h2>Glosas</h2>
+  <p>Só as frases estruturalmente interessantes. Puladas: {{QUAIS_E_POR_QUE}}.</p>
+  <div class="rolavel">
+    <table class="glosa">
+      <tr class="alvo" lang="{{LINGUA_LANG}}"><td>…</td><td>…</td></tr>
+      <tr class="pron"><td>…</td><td>…</td></tr>
+      <tr class="gl"><td>…</td><td>…</td></tr>
+    </table>
+  </div>
+  <p class="tr">{{TRADUCAO_IDIOMATICA}}</p>
+</section>
+
+<section class="exercicios">
+  <h2>Compreensão</h2>
+  <ol><li lang="{{LINGUA_LANG}}">{{PERGUNTA_NA_LINGUA_ALVO}}</li></ol>
+  <details class="gabarito"><summary>Gabarito</summary><ol><li lang="{{LINGUA_LANG}}">{{RESPOSTA}}</li></ol></details>
+</section>
+
+<section>
+  <h2>Vale virar página de gramática</h2>
+  <ul><li>{{ESTRUTURA}} → <code>/gramatica</code></li></ul>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p>Fonte: {{FONTE}} · gerado em {{DATA}} por <code>/leitura</code></p>
+</footer>
+</body>
+</html>

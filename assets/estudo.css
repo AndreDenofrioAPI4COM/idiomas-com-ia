@@ -1,0 +1,224 @@
+/* ============================================================
+   Idiomas com IA — folha de estilo única do material de estudo
+   Toda página HTML linka este arquivo. Não escreva CSS inline:
+   adicione a classe aqui e documente na skill notas-html.
+   ============================================================ */
+
+:root {
+  --bg:         #fbfaf7;
+  --superficie: #ffffff;
+  --borda:      #e2ddd2;
+  --texto:      #1e1c19;
+  --suave:      #6b655c;
+  --acento:     #2a5fa8;
+  --acento-bg:  #eaf0fa;
+  --ok:         #2f6f4f;
+  --ok-bg:      #e9f4ee;
+  --aviso:      #8a6a12;
+  --aviso-bg:   #fdf5df;
+  --erro:       #a8322a;
+  --erro-bg:    #fbeeec;
+
+  /* cores de tom — só para língua tonal (opcional) */
+  --t1: #c0392b;
+  --t2: #b5761a;
+  --t3: #2f7d43;
+  --t4: #2a5fa8;
+  --t0: #7b7b7b;
+
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans:  system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono:  "Cascadia Mono", Consolas, "SF Mono", monospace;
+  --cjk:   "Noto Sans CJK SC", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR",
+           "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Microsoft YaHei",
+           "Yu Gothic", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:         #16151a;
+    --superficie: #1e1d23;
+    --borda:      #34323c;
+    --texto:      #ebe8e2;
+    --suave:      #a09a91;
+    --acento:     #7ba7e8;
+    --acento-bg:  #1c2433;
+    --ok:         #6fbf8f;
+    --ok-bg:      #18261e;
+    --aviso:      #d9b95c;
+    --aviso-bg:   #2a2418;
+    --erro:       #e8837a;
+    --erro-bg:    #2b1e1e;
+    --t1: #e8746a; --t2: #dda85c; --t3: #6fbf8f; --t4: #7ba7e8; --t0: #9a9a9a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 46rem;
+  padding: 1.5rem 1rem 5rem;
+  background: var(--bg);
+  color: var(--texto);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 40rem) { body { padding: 2rem 1.25rem 5rem; } }
+
+/* ---------- cabeçalho e navegação ---------- */
+
+.breadcrumb { font-family: var(--sans); font-size: .8125rem; color: var(--suave); margin-bottom: 1.5rem; }
+.breadcrumb a { color: var(--suave); }
+
+header.pagina { border-bottom: 2px solid var(--acento); padding-bottom: 1rem; margin-bottom: 2rem; }
+.kicker {
+  font-family: var(--sans); font-size: .75rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--acento); margin: 0 0 .35rem;
+}
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .5rem; font-weight: 600; }
+h2 { font-size: 1.25rem; margin: 2.5rem 0 .75rem; font-weight: 600; }
+h3 { font-size: 1.0625rem; margin: 1.75rem 0 .5rem; font-family: var(--sans); font-weight: 600; }
+.resumo { color: var(--suave); margin: 0; font-size: .95rem; }
+.dod { font-family: var(--sans); font-size: .875rem; margin: .75rem 0 0; }
+
+a { color: var(--acento); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code { font-family: var(--mono); font-size: .875em; }
+
+.rodape {
+  margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--borda);
+  font-family: var(--sans); font-size: .8125rem; color: var(--suave);
+}
+
+/* ---------- língua-alvo, transliteração, tradução ---------- */
+
+:lang(zh), :lang(ja), :lang(ko) { font-family: var(--cjk); }
+
+.alvo { font-size: 1.4rem; line-height: 1.5; margin: 0; }
+.pron { font-family: var(--sans); font-size: .95rem; color: var(--suave); margin: .15rem 0 0; }
+.tr   { margin: .15rem 0 0; }
+
+ruby { ruby-position: over; }
+rt   { font-family: var(--sans); font-size: .5em; color: var(--suave); font-weight: 400; }
+
+/* tons (opcional, língua tonal) */
+.t1 { color: var(--t1); } .t2 { color: var(--t2); } .t3 { color: var(--t3); }
+.t4 { color: var(--t4); } .t0 { color: var(--t0); }
+.sandhi { font-family: var(--sans); font-size: .8125rem; color: var(--aviso); }
+
+/* ---------- blocos semânticos ---------- */
+
+figure.exemplo {
+  margin: 1rem 0; padding: .85rem 1rem;
+  background: var(--superficie); border-left: 3px solid var(--borda); border-radius: 0 4px 4px 0;
+}
+figure.exemplo .nota { font-family: var(--sans); font-size: .8125rem; color: var(--suave); margin: .5rem 0 0; }
+
+.formula {
+  font-family: var(--mono); font-size: .95rem;
+  background: var(--superficie); border: 1px solid var(--borda); border-radius: 4px;
+  padding: .75rem 1rem; margin: 1rem 0; overflow-x: auto; white-space: nowrap;
+}
+
+.errado { color: var(--erro); text-decoration: line-through; text-decoration-color: var(--erro); }
+.errado::before { content: "*"; display: inline-block; margin-right: .15rem; }
+
+.contraste, .cultura, .alerta {
+  margin: 1.25rem 0; padding: .85rem 1rem; border-radius: 4px;
+  font-size: .95rem; border: 1px solid var(--borda); background: var(--superficie);
+}
+.contraste { border-left: 3px solid var(--acento); }
+.cultura   { border-left: 3px solid var(--ok); }
+.alerta    { border-left: 3px solid var(--aviso); background: var(--aviso-bg); }
+.contraste > :first-child, .cultura > :first-child, .alerta > :first-child { margin-top: 0; }
+.contraste > :last-child,  .cultura > :last-child,  .alerta > :last-child  { margin-bottom: 0; }
+
+.challenge {
+  font-family: var(--sans); font-size: .6875rem; letter-spacing: .06em; text-transform: uppercase;
+  background: var(--acento-bg); color: var(--acento); padding: .1rem .4rem; border-radius: 3px;
+  vertical-align: middle;
+}
+
+/* ---------- vocabulário ---------- */
+
+dl.vocab { margin: 1rem 0; }
+dl.vocab dt { font-size: 1.35rem; margin-top: .9rem; }
+dl.vocab dd {
+  margin: .1rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; align-items: baseline;
+  font-family: var(--sans); font-size: .9rem;
+}
+dl.vocab .classe, dl.vocab .info, dl.vocab .nivel { color: var(--suave); font-size: .8125rem; }
+dl.vocab .nivel { border: 1px solid var(--borda); border-radius: 3px; padding: 0 .35rem; }
+
+/* ---------- tabelas ---------- */
+
+.rolavel { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+table.tabela, table.glosa {
+  border-collapse: collapse; margin: 1rem 0; font-family: var(--sans); font-size: .9rem;
+}
+table.tabela { width: 100%; }
+table.tabela th, table.tabela td {
+  border-bottom: 1px solid var(--borda); padding: .5rem .6rem; text-align: left; vertical-align: top;
+}
+table.tabela th { font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; color: var(--suave); }
+
+table.glosa { width: auto; border: 0; }
+table.glosa td { padding: .1rem .6rem .1rem 0; border: 0; white-space: nowrap; }
+table.glosa .alvo td { font-size: 1.25rem; }
+table.glosa .pron td { font-size: .85rem; color: var(--suave); }
+table.glosa .gl td   { font-size: .75rem; letter-spacing: .04em; color: var(--acento); }
+
+/* ---------- exercícios ---------- */
+
+.exercicios ol { padding-left: 1.25rem; }
+.exercicios li { margin: .45rem 0; }
+details.gabarito, details.recolhido {
+  margin-top: 1.25rem; padding: .6rem .9rem;
+  border: 1px dashed var(--borda); border-radius: 4px; background: var(--superficie);
+}
+details.gabarito summary, details.recolhido summary {
+  cursor: pointer; font-family: var(--sans); font-size: .85rem; color: var(--suave);
+}
+
+/* ---------- índices e painel ---------- */
+
+.cards {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: .75rem;
+  margin: 1.25rem 0; padding: 0; list-style: none;
+}
+.cards li { border: 1px solid var(--borda); border-radius: 5px; padding: .8rem .9rem; background: var(--superficie); }
+.cards a { font-family: var(--sans); font-weight: 600; font-size: .95rem; text-decoration: none; }
+.cards a:hover { text-decoration: underline; }
+.cards .meta { display: block; font-family: var(--sans); font-size: .75rem; color: var(--suave); margin-top: .25rem; }
+.cards p { margin: .4rem 0 0; font-size: .875rem; color: var(--suave); }
+.vazio { color: var(--suave); font-style: italic; }
+
+/* ---------- tracker: quadro kanban e barras ---------- */
+
+.quadro { display: grid; grid-template-columns: 1fr; gap: .75rem; margin: 1rem 0; }
+@media (min-width: 40rem) { .quadro { grid-template-columns: repeat(3, 1fr); } }
+.coluna { border: 1px solid var(--borda); border-radius: 5px; background: var(--superficie); padding: .75rem; }
+.coluna h3 { margin: 0 0 .5rem; font-size: .8125rem; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); }
+.coluna ul { margin: 0; padding: 0; list-style: none; font-family: var(--sans); font-size: .875rem; }
+.coluna li { border: 1px solid var(--borda); border-radius: 4px; padding: .4rem .55rem; margin: .35rem 0; background: var(--bg); }
+.coluna.fazendo { border-top: 3px solid var(--aviso); }
+.coluna.done    { border-top: 3px solid var(--ok); }
+
+.barra { height: .5rem; background: var(--borda); border-radius: 3px; overflow: hidden; margin: .35rem 0 .75rem; }
+.barra span { display: block; height: 100%; background: var(--acento); }
+
+/* ---------- veredito de simulação ---------- */
+
+.veredito { margin: 1.25rem 0; padding: .85rem 1rem; border-radius: 4px; font-family: var(--sans); border: 1px solid var(--borda); }
+.veredito.pronto { border-left: 4px solid var(--ok);    background: var(--ok-bg); }
+.veredito.trava  { border-left: 4px solid var(--aviso); background: var(--aviso-bg); }
+.veredito.nao    { border-left: 4px solid var(--erro);  background: var(--erro-bg); }
+
+@media print {
+  body { max-width: none; }
+  details.gabarito { display: none; }
+}

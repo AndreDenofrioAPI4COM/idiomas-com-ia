@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{MUSICA}} — {{ARTISTA}} · Música · {{LINGUA}}</title>
+  <link rel="stylesheet" href="../assets/estudo.css">
+  <meta name="idiomas:tipo" content="musica">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="—">
+</head>
+<body>
+<nav class="breadcrumb"><a href="../index.html">Início</a> › <a href="index.html">Músicas</a> › {{MUSICA}}</nav>
+
+<header class="pagina">
+  <p class="kicker">Música · {{ARTISTA}} · {{ANO}}</p>
+  <h1 lang="{{LINGUA_LANG}}">{{MUSICA}}</h1>
+  <p class="resumo">{{POR_QUE_E_BOA_PARA_ESTUDO}}</p>
+</header>
+
+<main>
+
+<section>
+  <h2>Linha a linha</h2>
+  <figure class="exemplo">
+    <p class="alvo" lang="{{LINGUA_LANG}}">{{VERSO}}</p>
+    <p class="pron">{{PRONUNCIA_SE_HOUVER}}</p>
+    <p class="tr">{{TRADUCAO_IDIOMATICA}}</p>
+  </figure>
+</section>
+
+<section>
+  <h2>Vocabulário-chave</h2>
+  <dl class="vocab">
+    <dt lang="{{LINGUA_LANG}}">{{ITEM}}</dt>
+    <dd><span class="tr">{{SENTIDO}}</span><span class="classe">{{CLASSE}}</span></dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Notas de canção</h2>
+  <p>Licença poética, inversões, elisões, onde o cantor "come" sílabas em relação à fala normal.</p>
+</section>
+
+<section>
+  <h2>Três versos para decorar inteiros</h2>
+  <ol><li lang="{{LINGUA_LANG}}">{{VERSO}}</li></ol>
+</section>
+
+<div class="cultura"><p>{{REFERENCIA_CULTURAL_SE_HOUVER}}</p></div>
+
+</main>
+
+<footer class="rodape">
+  <p>Gerado em {{DATA}} por <code>/musica</code> · cartões: <code>cartoes/{{DATA}}-{{SLUG}}.csv</code></p>
+</footer>
+</body>
+</html>

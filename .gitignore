@@ -1,0 +1,25 @@
+# Gravações da própria voz — ficam ao lado do material, fora do versionamento
+audio/
+
+# Mídia e coleções do Anki — regeráveis ou pessoais
+*.colpkg
+media/
+*.mp3
+*.wav
+*.ogg
+*.m4a
+
+# Ambiente
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Rascunho local
+scratch/
+tmp/

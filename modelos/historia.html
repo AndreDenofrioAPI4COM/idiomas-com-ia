@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITULO}} — História · {{LINGUA}}</title>
+  <link rel="stylesheet" href="../assets/estudo.css">
+  <meta name="idiomas:tipo" content="historia">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="{{BLOCO_SLUG_OU_TRACO}}">
+</head>
+<body>
+<nav class="breadcrumb"><a href="../index.html">Início</a> › <a href="index.html">Histórias</a> › {{TITULO}}</nav>
+
+<header class="pagina">
+  <p class="kicker">História graduada · {{NIVEL}}</p>
+  <h1>{{TITULO}}</h1>
+  <p class="resumo">~90% do léxico no seu nível · {{N}} challenge words, cada uma repetida ao menos 2×.
+  Leia primeiro sem apoio.</p>
+</header>
+
+<main>
+
+<article lang="{{LINGUA_LANG}}">
+  <p>{{PARAGRAFO}}</p>
+</article>
+
+<details class="recolhido">
+  <summary>Versão com pronúncia</summary>
+  <p lang="{{LINGUA_LANG}}">{{TEXTO_COM_RUBY_OU_PRONUNCIA}}</p>
+</details>
+
+<section>
+  <h2>Challenge words</h2>
+  <dl class="vocab">
+    <dt lang="{{LINGUA_LANG}}">{{ITEM}} <span class="challenge">challenge</span></dt>
+    <dd><span class="tr">{{SENTIDO}}</span><span class="classe">{{CLASSE}}</span></dd>
+  </dl>
+</section>
+
+<section class="exercicios">
+  <h2>Perguntas</h2>
+  <ol><li lang="{{LINGUA_LANG}}">{{PERGUNTA_NA_LINGUA_ALVO}}</li></ol>
+  <details class="gabarito"><summary>Gabarito</summary><ol><li lang="{{LINGUA_LANG}}">{{RESPOSTA}}</li></ol></details>
+</section>
+
+<details class="recolhido">
+  <summary>Tradução completa</summary>
+  <p>Só depois de responder as perguntas.</p>
+</details>
+
+</main>
+
+<footer class="rodape">
+  <p>Gerado em {{DATA}} por <code>/historia</code> · cartões: <code>cartoes/{{DATA}}-{{SLUG}}.csv</code></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{LINGUA}} — Painel</title>
+  <link rel="stylesheet" href="assets/estudo.css">
+  <meta name="idiomas:tipo" content="painel">
+  <meta name="idiomas:data" content="{{DATA}}">
+  <meta name="idiomas:bloco" content="—">
+</head>
+<body>
+
+<header class="pagina">
+  <p class="kicker">Idiomas com IA · {{LINGUA}}</p>
+  <h1>{{OBJETIVO_EM_UMA_FRASE}}</h1>
+  <p class="resumo">{{PRAZO_OU_SEM_PRAZO}} · critério de sucesso: {{CRITERIO_DE_SUCESSO}}</p>
+</header>
+
+<main>
+
+<section>
+  <h2>Hoje</h2>
+  <ul>
+    <li><strong>Trilha A, todo dia:</strong> abrir o Anki e zerar a fila. Pode ser três minutos. Sem cartão novo.</li>
+    <li><strong>Trilha B, quando houver energia:</strong> <code>/revisao</code> no Claude Code — puxa o próximo lote,
+      treina a fala, registra a sessão.</li>
+  </ul>
+  <p>Num dia ruim: zera a fila e não importa lote. Nunca o contrário.</p>
+</section>
+
+<section>
+  <h2>Onde está cada coisa</h2>
+  <ul class="cards">
+    <li><a href="progresso/tracker.html">Progresso</a>
+      <span class="meta">quadro, streak, burn-down</span>
+      <p>O que está em backlog, fazendo e done.</p></li>
+    <li><a href="curriculo/index.html">Currículo</a>
+      <span class="meta">um arquivo por bloco</span>
+      <p>Os blocos na ordem em que entram e o critério de pronto de cada um.</p></li>
+    <li><a href="cartoes/index.html">Cartões</a>
+      <span class="meta">CSV para importar no Anki</span>
+      <p>Um arquivo por lote. Puxar = importar o próximo.</p></li>
+    <li><a href="diario/index.html">Diário</a>
+      <span class="meta">uma sessão por arquivo</span>
+      <p>O que aconteceu em cada sessão de trilha B.</p></li>
+    <li><a href="temas/index.html">Temas</a>
+      <span class="meta"><code>/tema</code></span>
+      <p>Domínios fora do livro-texto.</p></li>
+    <li><a href="gramatica/index.html">Gramática</a>
+      <span class="meta"><code>/gramatica</code></span>
+      <p>Uma página por ponto, só o que aparece no que você vai dizer ou ouvir.</p></li>
+    <li><a href="leituras/index.html">Leituras</a>
+      <span class="meta"><code>/leitura</code></span>
+      <p>Textos autênticos com tradução e glosas.</p></li>
+    <li><a href="historias/index.html">Histórias</a>
+      <span class="meta"><code>/historia</code></span>
+      <p>Histórias graduadas no seu nível.</p></li>
+    <li><a href="musicas/index.html">Músicas</a>
+      <span class="meta"><code>/musica</code></span>
+      <p>Letras destrinchadas linha a linha.</p></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Configuração</h2>
+  <ul>
+    <li><a href="assistente/perfil.md">Perfil</a> — quem você é, o objetivo, a língua e a rotina. Fonte de verdade de tudo.</li>
+    <li><a href="assistente/metodo.md">Método operacional</a> — as regras que o assistente segue.</li>
+    <li><a href="docs/como-usar.md">Como usar</a> · <a href="docs/anki.md">Anki</a> · <a href="docs/faq.md">FAQ</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p>Painel criado em {{DATA}} por <code>/comecar</code></p>
+</footer>
+</body>
+</html>
