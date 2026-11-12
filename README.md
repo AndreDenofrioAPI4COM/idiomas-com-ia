@@ -82,7 +82,7 @@ Os comandos (`/curriculo`, `/vocab`, `/gramatica`, `/tema`, `/leitura`, `/histor
 | [`assistente/`](assistente/) | o "cérebro": instruções, método operacional e o modelo de perfil. As duas rotas usam |
 | [`anki/pacotes/`](anki/pacotes/) | um `.apkg` por língua: cria o tipo de nota, o deck e os cartões de Produção, Escuta e (em escrita não latina) Leitura |
 | [`docs/`](docs/) | [como usar](docs/como-usar.md) · [o método](docs/metodo.md) · [de onde veio](docs/inspiracao.md) · [FAQ](docs/faq.md) · [Anki](docs/anki.md) |
-| [`ferramentas/`](ferramentas/) | `validar_csv.py` (confere os lotes) e `gerar_pacotes.py` (cria pacote para outra língua) |
+| [`ferramentas/`](ferramentas/) | `validar_csv.py` (confere os lotes), `gerar_pacotes.py` (cria pacote para outra língua) e `testar_anki.py` (testa pacotes e CSV contra o motor oficial do Anki) |
 | `CLAUDE.md`, [`.claude/`](.claude/) | a rota Claude Code: constituição, 10 comandos e a skill das páginas HTML |
 | [`modelos/`](modelos/), [`assets/`](assets/) | modelos das páginas de estudo da rota Claude Code |
 

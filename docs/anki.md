@@ -205,13 +205,15 @@ uma linha e você reimportar sem perder nada.
 
 **Importar é puxar.** Importe um lote quando for começá-lo — o lote que não foi importado é o seu backlog.
 
-### ⚠️ Antes de confiar na reimportação
+### Reimportar é seguro — testado
 
-O manual do Anki não diz com clareza o que acontece, numa atualização, com os campos que **não têm coluna**
-no CSV (`audio` e `mnemonico`). O desenho deste método assume que eles ficam intactos. **Teste uma vez**
-antes de depender disso: escreva algo no campo `mnemonico` de uma nota, reimporte o CSV dela, e confira se
-o texto continua lá. Se sumir, avise no repositório (abra uma *issue*) — e, até lá, não reimporte lotes
-que tenham notas com mnemônico ou áudio nativo.
+Testado com o motor oficial do Anki (biblioteca `anki` 26.09.4, a mesma do AnkiMobile e do AnkiDroid),
+pelo script [`ferramentas/testar_anki.py`](../ferramentas/testar_anki.py):
+
+- **CSV corrigido:** reimportar atualiza a nota no lugar, preserva o histórico de revisão e **não toca
+  nos campos sem coluna** — o seu `audio` e o seu `mnemonico` ficam intactos.
+- **Pacote novo:** importar uma versão nova do `.apkg` da sua língua (por exemplo, com outra voz)
+  atualiza o molde no lugar, sem criar um tipo de nota duplicado.
 
 ### Quando a chave muda
 
